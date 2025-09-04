@@ -33,6 +33,9 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
     buildFeatures { viewBinding = true }
+room {
+        schemaDirectory("$projectDir/schemas")
+    }
 }
 
 dependencies {
@@ -58,4 +61,9 @@ dependencies {
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+}
+
+
+kapt {
+    correctErrorTypes = true
 }

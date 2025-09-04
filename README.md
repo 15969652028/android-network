@@ -8,3 +8,6 @@
 - 日志含中文说明、ISO8601 时间、设备标识（IMEI*或*ANDROID_ID）、Wi-Fi/蜂窝指标（尽力获取 RSRP/RSRQ/SINR）
 
 > 如果你之前报 `chmod +x gradlew: No such file or directory`，使用此仓库结构与工作流即可解决（不依赖 gradle wrapper）。
+
+
+> 已修复：Room 需要 schemaDirectory，已在 `app/build.gradle.kts` 配置并添加 `app/schemas/` 目录。
