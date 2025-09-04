@@ -17,7 +17,7 @@ data class NetworkLog(
     val deviceId: String,
     val brand: String,
     val model: String,
-    // Wi‑Fi
+    // Wi-Fi
     val ssid: String? = null,
     val wifiRssi: Int? = null,
     // 蜂窝
