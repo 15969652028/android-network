@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RadioGroup
+            android:id="@+id/rgEnv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生产"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbStage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="自定义上传 API 根地址（留空则用预设）"/>
+
+        <EditText
+            android:id="@+id/etProbe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="探测 URL (例如 https://www.google.com/generate_204 或 /healthz)"/>
+
+        <EditText
+            android:id="@+id/etInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="推送周期（单位：秒，建议 ≥5 秒）"/>
+
+        <CheckBox
+            android:id="@+id/cbCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="启用兼容增强（尽可能获取 RSRP/RSRQ/SINR）"
+            android:checked="true"/>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始监控"/>
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="停止监控"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="实时状态"/>
+
+        <TextView
+            android:id="@+id/tvDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设备ID/机型：-"/>
+
+        <TextView
+            android:id="@+id/tvServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="目标服务：-"/>
+
+        <TextView
+            android:id="@+id/tvInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="推送周期：-"/>
+
+        <TextView
+            android:id="@+id/tvLatency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最近延迟(ms)：-"/>
+
+        <TextView
+            android:id="@+id/tvLastUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最后上报时间：-"/>
+
+        <TextView
+            android:id="@+id/tvLastEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最后事件：-"/>
+
+    </LinearLayout>
+</ScrollView>
